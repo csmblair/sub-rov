@@ -2,7 +2,7 @@
 #define dc_enA 9
 #define dc_in1 4
 #define dc_in2 5
-#define dc_enB 10
+#define dc_enB 12
 #define dc_in3 6
 #define dc_in4 7
 
@@ -15,13 +15,13 @@ int dc_motorSpeedB = 0;
 #include <Stepper.h>
 
 // define number of steps per revolution
-#define STEPS 200
+#define STEPS 48
 
 // define stepper motor control pins
-#define step_IN1  13
-#define step_IN2  12
-#define step_IN3  11
-#define step_IN4  2
+#define step_IN1  10
+#define step_IN2  11
+#define step_IN3  12
+#define step_IN4  13
 
 // initialize stepper library
 Stepper stepper(STEPS, step_IN4, step_IN2, step_IN3, step_IN1);
@@ -32,8 +32,8 @@ Stepper stepper(STEPS, step_IN4, step_IN2, step_IN3, step_IN1);
 void setup()
 {
 //***********************DC MOTORS***********************
-  pinMode(dc_enA, OUTPUT);
-  pinMode(dc_enB, OUTPUT);
+  //pinMode(dc_enA, OUTPUT);
+  //pinMode(dc_enB, OUTPUT);
   pinMode(dc_in1, OUTPUT);
   pinMode(dc_in2, OUTPUT);
   pinMode(dc_in3, OUTPUT);
